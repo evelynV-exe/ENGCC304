@@ -10,12 +10,11 @@ int main()
     printf("Enter number rows and columns : ");
     scanf("%d %d", &rows1, &cols1);
 
-    for (i = 0; i < rows1; i++)
-        ;
-    for (j = 0; j < cols1; j++)
-    {
-        printf("Enter [%d %d] value : ", i, j); //print to printf
-        scanf("%d", Matrix1[i][j]);
+    for (i = 0; i < rows1; i++) {
+        for (j = 0; j < cols1; j++) {
+            printf("Enter [%d %d] value : ", i, j); //print to printf
+            scanf("%d", Matrix1[i][j]);
+        }
     }
 
     printf("\nEnter Matrix2 : \n");
