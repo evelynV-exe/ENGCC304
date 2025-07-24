@@ -28,7 +28,7 @@ int main() {
     printf("Salary = U$ %d", salary);
 
     return 0;
-}
+} //end function
 ```
 
 ## TEST CASE 1
