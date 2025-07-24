@@ -3,19 +3,17 @@
 
 int isPrime(int num)
 {
-    if (num < 2) { //added curly brackets
+    if (num < 2)
         return 0;
-    }
     for (int i = 2; i <= sqrt(num); i++) {
         if (num % i == 0) {
             return 0;
-        }
-    }
+        }//end if
+    }//end for
     return 1;
-}
+}//end function
 
-int main()
-{
+int main() {
     int n;
 
     printf("Enter N : ");
@@ -26,13 +24,13 @@ int main()
     for (int i = 0; i < n; i++) {
         printf("Enter value[%d] : ", i);
         scanf("%d", &arr[i]);
-    }
+    } //end for
 
     printf("Index:  ");
 
     for (int i = 0; i < n; i++) {
         printf("%2d ", i);
-    }
+    } // end for
 
     printf("\n");
     printf("Array:  ");
@@ -42,10 +40,10 @@ int main()
           printf("%2d ", arr[i]);
         } else {
           printf("%2s ", "#");
-        }
-    }
+        } //end if-else
+    }//end for
 
     printf("\n");
     
     return 0;
-}
+}//end function
