@@ -79,6 +79,9 @@ int main() {
                     scanf("%d", &userGuess);
                 }// end if
             }
+        } else {
+            printf("See you again, player.");
+            break;
         }// end if
     }// end while
 }// end function
