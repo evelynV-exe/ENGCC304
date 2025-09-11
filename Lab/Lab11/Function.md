@@ -6,7 +6,52 @@
 
 ## FIX CODE
 ```c++
--
+#include <stdio.h>
+
+int power( int base, int expon ) {
+    int result = 1 ;
+
+    while ( expon != 0 ) {
+        result *= base ;
+        expon-- ;
+    } // end while
+
+    return result;
+} // end function
+
+int main () {
+    int inputNum, numlength, isArmstrong, checkingNum, digit, sum;
+    int digits = 0;
+
+    printf( "Enter a number: " ) ;
+    scanf( "%d", &inputNum ) ;
+
+    isArmstrong = inputNum;
+
+    //----|Check the length
+    numlength = inputNum;
+    while ( numlength != 0 ) {
+        digits++ ;
+        numlength /= 10 ;
+    } // end while
+
+    //----|Check for the armstrong number
+    checkingNum = inputNum;
+    while ( checkingNum != 0 ) {
+        digit = checkingNum % 10 ;
+        sum += power( digit, digits ) ;
+        checkingNum /= 10 ;
+    } // end while
+
+    //----|Print the result
+    if ( sum == isArmstrong ) {
+        printf( "Pass." ) ;
+    } else {
+        printf( "Not pass." ) ;
+    } // end if
+
+    return 0;
+} // end function
 ```
 
 ## TEST CASE
