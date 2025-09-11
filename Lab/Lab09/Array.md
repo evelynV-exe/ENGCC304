@@ -27,7 +27,7 @@ int main() {
         printf( "%d ", i ) ;
     } // end for
 
-    //----|Check for prime numbers
+    //----|Check for prime numbers and print the array result
     printf( "\nArray: \t" );
     for ( int i = 0; i < n; i++ ) {
 
