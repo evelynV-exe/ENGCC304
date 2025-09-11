@@ -5,7 +5,44 @@
 
 ## FIX CODE
 ```c++
--
+#include <stdio.h>
+
+int main() {
+    char word[ 20 ] ;
+    int length = 0 ;
+    int left = 0 ;
+    int right = length - 1 ;
+    bool isPalindrome = true ;
+
+    //----|Ask the user for the word
+    printf( "Enter word: " ) ;
+    scanf( "%s", word ) ;
+
+    //----|check the length of the word
+    while ( word[length] != '\0' ) {
+        length++ ;
+    } // end while
+
+    //----|Switch the places for the word to check if it's a palindrome or not
+    while ( left < right ) {
+        if ( word[ left ] != word[ right ] ) {
+            isPalindrome = false ;
+            break ;
+        } // end if
+
+        left++ ;
+        right-- ;
+    } // end while
+
+    //----|Print the result
+    if ( isPalindrome ) {
+        printf( "Pass." ) ;
+    } else {
+        printf( "Not pass." ) ;
+    } // end if
+
+    return 0;
+} // end function
 ```
 
 ## TEST CASE
