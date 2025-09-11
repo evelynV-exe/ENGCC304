@@ -3,7 +3,58 @@
 
 ## FIX CODE
 ```c++
--
+#include <stdio.h>
+
+int main() {
+    int valueNum[ 100 ] ;
+    int n = 0 ;
+    
+    //----|ask for the array size
+    printf( "Enter the value of N: " ) ;
+    scanf( "%d", &n ) ;
+    
+    //----|ask the user for number inputs
+    printf( "-------------------------\n" ) ;
+    for ( int i = 0; i < n; i++ ) {
+        printf( "Enter the value [%d]: \n", i ) ;
+        scanf( "%d", &valueNum[i] ) ;
+    } // end for loop
+
+    //----|print index numbers
+    printf( "-------------------------\n" ) ;
+    printf( "Index: \t" ) ;
+    for ( int i = 0; i < n; i++ ) {
+        printf( "%d ", i ) ;
+    } // end for
+
+    //----|Check for prime numbers
+    printf( "\nArray: \t" );
+    for ( int i = 0; i < n; i++ ) {
+
+        int num = valueNum[i] ;
+        bool isPrime = true ;
+
+        if ( num < 2 ) {
+            isPrime = false ;
+        } else {
+            for ( int j = 2; j < num - 1; j++ ) {
+                if ( num % j == 0 ) {
+                    isPrime = false ;
+                    break ;
+                } // end if
+            } // end for
+        } // end if
+
+        if ( isPrime ) {
+            printf( "%d ", num ) ;
+        } else {
+            printf( "# " ) ;
+        } //end if
+
+    } // end for
+
+    return 0;
+} // end function
 ```
 
 ## TEST CASE
