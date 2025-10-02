@@ -24,4 +24,4 @@ int main() {
     printf("Salary = U$ %.2f", salary);
 
     return 0;
-}
+} // end function
