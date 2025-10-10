@@ -1,3 +1,6 @@
+//Test case 1: Hi, This is my first time in RMUTL
+//Test case 2: Encourage your students to test their program with different input files to ensure its correctness
+
 #include <cstdio>
 #include <fstream>
 #include <string>
